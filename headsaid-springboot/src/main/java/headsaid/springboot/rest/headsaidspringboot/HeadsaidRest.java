@@ -12,10 +12,14 @@ public class HeadsaidRest
 	@Autowired
 	private HeadsaidService service;
 	
-	@RequestMapping("/HeadsaidRest")
-	public String getHeadsaid()
+	@RequestMapping(name = "/HeadsaidRest",produces= "application/json")
+
+	public HeadsaidModel getHeadsaid()
 	{
 		return service.getHeadsaid();
 		}
+
+	
+ 
 
 }
